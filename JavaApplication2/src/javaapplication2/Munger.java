@@ -4,23 +4,31 @@
  * and open the template in the editor.
  */
 package javaapplication2;
-
-import java.util.ArrayList;
-
 /**
  *
- * @author s.binder
+ * @author rednibnafets
  */
 public class Munger {
-    
-    private ArrayList< Integer > al ;
+    private final int maxMunge = 55 ;
+    private int[] mungarr ;
     
     public Munger() 
     {
-        for(Integer i : al )
+        mungarr = new int[maxMunge] ;
+        for( int i = 0 ; i < maxMunge ; i++ )
         {
-            al.add(i) ;
+            mungarr[i] = i ;
+            
         }
+    }
+    
+    public Munger display()    
+    {
+        for( int i = 0 ; i < maxMunge ; i++ )
+        {
+            System.out.println( mungarr[i]) ;
+        }
+        return this ; 
     }
     
 }
